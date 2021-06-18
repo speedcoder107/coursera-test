@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combining selectors</title>
+    <style>
+        /* any p inside any div, no matter how deep p is */
+        div p{
+            background-color: cadetblue;
+        }
+        /* any p indide li inside div, no matter how deep */
+        div li p{
+            border:3px solid chocolate;
+        }
+        /* only that o, which is a direct child of a div */
+        div > p{
+            background-color: blue;
+        }
+        /* for any p, which, comes after a div. First, we open and clode a div tag. and then,we open and close the p tag. <div></div> <p></p> */
+        div + p{
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>this is more on selectors.</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>this is a div inside an li.</p></li>
+            </ul>
+            <p>this is a paragraph.</p>
+        </div>
+        <p>this is another paragraph.</p>
+    </div>
+    <p>this is outer-most paragraph.</p>
+
+
+</body>
+</html>
