@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>specificity in CSS</title>
+<style>
+header.navigation p {
+  color: blue;
+}
+p.blurb {
+  color: red;
+}
+p {
+  color: green !important;
+}
+img {
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+}
+</style>
+</head>
+<body>
+<header class="navigation">
+  <p class="blurb">So the concept of specificity tells us that whch context is going to be given more acknowledgement, when more than one css commands are targetted on the same thing but in different ways.So to calculate the specifity, keep this picture in mind.</p>
+  <p>Also, !important will disregard specificity, so be cautious.</p>
+  <img src="specificity1.jpg" alt="there should be an image here.">
+  <img src="specificity2.jpg" alt="there should be an image here.">
+  <img src="specificity3.jpg" alt="there should be an image here.">
+</header>
+</body>
+</html>
