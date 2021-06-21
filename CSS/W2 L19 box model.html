@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+    /* difference between * and body is that body is a parent element which gives its code to all its daughter elements and * is used to say that any code written inside it, will be used in all the elements seperately. So, for an element such as border-box, which does not let itself inhrit to other daughter elemetns, we use * in those cases.  */
+* {
+  box-sizing:border-box;
+  /* width will be adjusted not according to content (content-box) but according to border. */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;
+  overflow:auto; 
+  /* if something overflows out of the box  dut to width and height constrains. So, default overflow is visible. if overflow is hidden, then content will hide itself, if overflow is auto, then you get a scrollbar if needed. IF overflow is scroll, then you will get scroll bar on vertical and horizontal side, even if it is not needed */
+}
+#content {
+  background-color: #90EE90; /* green */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis. 
+  </div>
+</div>
+
+
+</body>
+</html>
